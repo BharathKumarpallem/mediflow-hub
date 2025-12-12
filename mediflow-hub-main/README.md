@@ -30,6 +30,17 @@ npm i
 npm run dev
 ```
 
+## Social preview image
+
+The project ships with `public/og-image.svg` for social previews. For broader compatibility across platforms, add a PNG fallback at `public/og-image.png` (recommended 1200x630 or similar). The HTML template will prefer `og-image.png` if present and fall back to the SVG.
+
+You can create the PNG by exporting the SVG from an editor (Figma, Illustrator) or converting it with an online tool or ImageMagick:
+
+```sh
+# example using ImageMagick
+magick convert public/og-image.svg -resize 1200x630 public/og-image.png
+```
+
 **Edit a file directly in GitHub**
 
 - Navigate to the desired file(s).
